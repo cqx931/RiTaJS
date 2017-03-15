@@ -149,7 +149,7 @@ gulp.task('build-1000-lex', ['clean'], function() {
 
   return gulp.src(sourceFiles("min"))
     .pipe(replace('##version##', version))
-    .pipe(concat(rita+'-full.js'))
+    .pipe(concat(rita+'.js'))
     .pipe(size({showFiles:true}))
     .pipe(chmod(644))
     .pipe(gulp.dest(destDir));
@@ -320,7 +320,7 @@ function log(msg) { console.log('[INFO] '+ msg); }
 // ----------------------------------------------------
 
 // task composition
-gulp.task('build', [ 'build-lex', 'build-1000-lexm']);
+gulp.task('build', [ 'build-lex', 'build-1000-lex']);
 gulp.task('build.full', [ 'build', 'build-minify' ]);
 gulp.task('build-minify', [ 'build-minify-1000-lex', 'build-minify-lex' ]);
 
