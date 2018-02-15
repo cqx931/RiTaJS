@@ -7,7 +7,7 @@ var RiTa = {
   VERSION: '##version##',
 
   /* For tokenization, Can't -> Can not, etc. */
-  SPLIT_CONTRACTIONS: false,
+  SPLIT_CONTRACTIONS: true,
 
   JAVA: 1, JS: 2, NODE: 3,
 
